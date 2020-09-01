@@ -21,6 +21,8 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+	<meta name="naver-site-verification" content="77f96d4f5a3dfb54bd3bd8e6f269593122e08d78" />
+
 </head>
 
 <body>
@@ -122,16 +124,16 @@
 		 ========================================================================================================== -->
 
 		<div class="fh5co-slider-outer wow fadeIn" data-wow-delay="0.36s">
-			<h1>SIMPLE WIDGETS</h1>
-			<small>Drag and Drop</small>
+			<h1>서비스 미리보기</h1>
+			<small>19가지의 국방부 공공데이터를 활용하여 부대별 식단정보와 73,000여 가지의 군 생활 정보를 제공합니다.</small>
 			<div class="container fh5co-slider-inner">
 
 				<div class="owl-carousel owl-theme">
 
-					<div class="item"><img src="img/smartphone-2.png" alt=""></div>
-					<div class="item"><img src="img/smartphone-2.png" alt=""></div>
-					<div class="item"><img src="img/iphone.png" alt=""></div>
-					<div class="item"><img src="img/smartphone-2.png" alt=""></div>
+					<div class="item"><img src="img/menu.png" alt=""></div>
+					<div class="item"><img src="img/jjambot-chatting_main.png" alt=""></div>
+					<div class="item"><img src="img/jjambot-chatting_main.png" alt=""></div>
+					<div class="item"><img src="img/jjambot-chatting_main.png" alt=""></div>
 
 
 				</div>
@@ -152,18 +154,20 @@
 
 					<div class="col-sm-6 in-order-1 wow animated fadeInLeft" data-wow-delay="0.22s">
 						<div class="col-sm-image-container">
-							<img class="img-float-left" src="img/smartphone-1.png" alt="smartphone-1">
-							<span class="span-new">NEW</span>
-							<span class="span-free">Free</span>
+							<img class="img-float-left" src="img/menu.png" alt="smartphone-1">
+							<span class="span-new">AI답변</span>
+							<span class="span-free">추천질문</span>
+
 						</div>
 					</div>
 
 					<div class="col-sm-6 in-order-2 sm-6-content wow animated fadeInRight" data-wow-delay="0.22s">
-						<h1>New Features</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolor iste beatae ad adipisci, fugiat dignissimos pariatur, dolore nemo suscipit cum nisi earum voluptates nulla! </p>
-						<span class="circle circle-first"><i class="fab fa-instagram"></i></span>
-						<span class="circle circle-middle"><i class="fab fa-facebook"></i></span>
-						<span class="circle circle-last"><i class="fab fa-twitter"></i></span>
+						<h1>부대 식단정보</h1>
+						<p>본인의 급양대를 선택하여 원하는 날짜의 식단 정보를 조회할 수 있습니다. 알러지 설정을 통해 알러지표기를 설정하거나 해제할수 있습니다.
+							식단정보는 국방부에서 공공데이터로 제공하는 "군 급양대별 병영 표준 식단 정보"를 통해 제공하며 급양대 상황에 따라 실제 식단과 차이가 있을 수 있습니다.</p>
+
+							<small>"짬봇-채팅"과 "짬봇-보이스"에서 모두 이용이 가능합니다.</small>
+
 					</div>
 
 					<div class="col-sm-6 in-order-3 sm-6-content wow animated fadeInLeft" data-wow-delay="0.22s">
@@ -175,12 +179,12 @@
 					</div>
 
 					<div class="col-sm-6 in-order-4 wow animated fadeInRight" data-wow-delay="0.22s">
-						<img class="img-float-right" src="img/smartphone-2.png" alt="smartphone-2">
+						<img class="img-float-right" src="img/jjambot-chatting_main.png" alt="jjambot-chatting_main.png2">
 					</div>
 
 					<div class="col-sm-6 in-order-5 wow animated fadeInLeft" data-wow-delay="0.22s">
 						<div class="col-sm-image-container">
-							<img class="img-float-left" src="img/smartphone-2.png" alt="smartphone-3">
+							<img class="img-float-left" src="img/jjambot-chatting_main.png" alt="smartphone-3">
 							<span class="span-data">DATA</span>
 							<span class="span-percent">100%</span>
 						</div>
@@ -290,9 +294,16 @@
 					</div>
 					<div class="column-3-3">
 						<div class="social-icons-footer">
-							<a href="https://www.facebook.com/fh5co"><i class="fab fa-facebook-f"></i></a>
-							<a href="https://freehtml5.co"><i class="fab fa-instagram"></i></a>
-							<a href="https://www.twitter.com/fh5co"><i class="fab fa-twitter"></i></a>
+
+							<a href="https://pf.kakao.com/_xlVKrxb/" target="_blank"><i class="fas fa-comments"></i></a>
+							<a href="#"><i class="fas fa-tv"></i></a>
+							<a href="https://wookingwoo.com/" target="_blank"><i class="fas fa-home"></i></a>
+
+
+							<br> <br> <br> <br>
+							<div id="kakao-talk-channel-chat-button2" data-channel-public-id="_xlVKrxb" data-title="question" data-size="small" data-color="mono" data-shape="pc" data-support-multiple-densities="true"></div>
+
+
 						</div>
 					</div>
 				</div>
@@ -301,6 +312,8 @@
 
 				<!-- <p class="copyright">&copy; 2018 App. All rights reserved. Design by FreeHTML5.</p> -->
 				<p class="copyright">&copy; 2020 JJAMBOT. All rights reserved. Design by <a href="https://wookingwoo.com">wookingwooo</a>.</p>
+
+
 
 			</div>
 		</footer>
@@ -327,6 +340,10 @@
 
 			Kakao.Channel.createChatButton({
 				container: '#kakao-talk-channel-chat-button',
+			});
+
+			Kakao.Channel.createChatButton({
+				container: '#kakao-talk-channel-chat-button2',
 			});
 
 
