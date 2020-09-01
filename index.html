@@ -57,9 +57,6 @@
 						<a href="#"><i class="fas fa-tv"></i></a>
 						<a href="https://wookingwoo.com/" target="_blank"><i class="fas fa-home"></i></a>
 
-
-
-
 					</div>
 				</div>
 			</nav>
@@ -73,7 +70,6 @@
 
 				<div class="btn btn-md wow fadeInLeft animated" data-wow-delay="1.05s" id="kakao-talk-channel-chat-button" data-channel-public-id="_xlVKrxb" data-title="question" data-size="small" data-color="yellow" data-shape="pc"
 					data-support-multiple-densities="true"></div>
-
 
 				<img class="fh5co-hero-smartphone animated fadeInRight wow" data-wow-delay="1s" src="img/jjambot-chatting_main.png" alt="Smartphone">
 			</div>
@@ -247,10 +243,12 @@
 							<h1>How to download JJAMBOT?</h1>
 							<p>"짬봇-채팅"은 별도의 앱을 설치할 필요가 없습니다. 카카오톡의 채널추가로 바로 이용하실수 있습니다.</p>
 							<p>"짬봇-보이스"는 기가지니에서 사용이 가능합니다.</p>
-							<a class="wow fadeIn animated" data-wow-delay="0.25s" href="#"><img class="app-store-btn" src="img/app-store-icon.png" alt="App Store Icon"></a>
+							<a class="wow fadeIn animated" data-wow-delay="0.25s" id="kakao-talk-channel-add-button" data-channel-public-id="_xlVKrxb" data-size="large" data-support-multiple-densities="true"></a>
 							<a class="wow fadeIn animated" data-wow-delay="0.67s" href="#"><img class="google-play-btn" src="img/google-play-icon.png" alt="Google Play Icon"></a>
 
-							<div id="kakao-talk-channel-add-button" data-channel-public-id="_xlVKrxb" data-size="large" data-support-multiple-densities="true"></div>
+
+
+
 
 
 
@@ -292,8 +290,6 @@
 					</div>
 					<div class="column-3-3">
 						<div class="social-icons-footer">
-
-
 							<a href="https://www.facebook.com/fh5co"><i class="fab fa-facebook-f"></i></a>
 							<a href="https://freehtml5.co"><i class="fab fa-instagram"></i></a>
 							<a href="https://www.twitter.com/fh5co"><i class="fab fa-twitter"></i></a>
@@ -314,48 +310,42 @@
 
 	</div> <!-- main page wrapper -->
 
-
-	<!-- 카카오톡 채널 추가하기 API -->
-	<script>
-		window.kakaoAsyncInit = function() {
-			Kakao.Channel.createAddChannelButton({
-				container: '#kakao-talk-channel-add-button',
-			});
-		};
-
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = 'https://developers.kakao.com/sdk/js/kakao.plusfriend.min.js';
-			fjs.parentNode.insertBefore(js, fjs);
-		})(document, 'script', 'kakao-js-sdk');
-	</script>
-
-	<!-- 카카오톡 채널 1:1 채팅 시작하기 API -->
-	<script>
-		window.kakaoAsyncInit = function() {
-			Kakao.Channel.createChatButton({
-				container: '#kakao-talk-channel-chat-button',
-			});
-		};
-
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = 'https://developers.kakao.com/sdk/js/kakao.plusfriend.min.js';
-			fjs.parentNode.insertBefore(js, fjs);
-		})(document, 'script', 'kakao-js-sdk');
-	</script>
-
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/main.js"></script>
+
+
+	<!-- 카카오톡 채널 API -->
+	<script>
+		window.kakaoAsyncInit = function() {
+			Kakao.Channel.createAddChannelButton({
+				container: '#kakao-talk-channel-add-button',
+			});
+
+
+			Kakao.Channel.createChatButton({
+				container: '#kakao-talk-channel-chat-button',
+			});
+
+
+
+		};
+
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = 'https://developers.kakao.com/sdk/js/kakao.plusfriend.min.js';
+			fjs.parentNode.insertBefore(js, fjs);
+		})(document, 'script', 'kakao-js-sdk');
+	</script>
+
+
+
+
 </body>
 
 </html>
