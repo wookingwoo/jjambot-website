@@ -92,6 +92,10 @@ export default function Footer() {
             </a>
           </p>
         </div>
+
+        <div className="footer-giant" aria-hidden="true">
+          JJAMBOT
+        </div>
       </div>
     </footer>
   );

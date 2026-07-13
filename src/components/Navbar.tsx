@@ -9,10 +9,16 @@ const LINKS = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 24);
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - doc.clientHeight;
+      setProgress(max > 0 ? window.scrollY / max : 0);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -66,6 +72,11 @@ export default function Navbar() {
           <span />
         </button>
       </div>
+      <span
+        className="nav-progress"
+        style={{ transform: `scaleX(${progress})` }}
+        aria-hidden="true"
+      />
     </header>
   );
 }

@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import Spotlight from "./Spotlight";
 
 const FEATURES = [
   {
@@ -39,7 +40,9 @@ export default function Features() {
     <section className="features section" id="features">
       <div className="container">
         <Reveal>
-          <span className="section-tag">Why JJAMBOT</span>
+          <span className="section-tag">
+            <i>01</i> Why JJAMBOT
+          </span>
           <h2 className="section-title">
             군 장병의 사용 환경을
             <br />
@@ -50,11 +53,11 @@ export default function Features() {
         <div className="features-grid">
           {FEATURES.map((f, i) => (
             <Reveal key={f.title} delay={i * 120}>
-              <article className="feature-card">
+              <Spotlight className="feature-card">
                 <div className="feature-icon">{f.icon}</div>
                 <h3>{f.title}</h3>
                 <p>{f.desc}</p>
-              </article>
+              </Spotlight>
             </Reveal>
           ))}
         </div>

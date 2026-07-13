@@ -16,6 +16,7 @@ export default function Hero() {
           </span>
 
           <h1 className="fade-item" style={{ animationDelay: "0.15s" }}>
+            <span className="hero-kicker">Military life, answered.</span>
             군생활의 모든 정보,
             <br />
             <span className="grad-text">짬봇</span>에게 물어보세요
@@ -57,6 +58,7 @@ export default function Hero() {
         </div>
 
         <div className="hero-visual fade-item" style={{ animationDelay: "0.3s" }}>
+          <div className="hero-orbit" aria-hidden="true" />
           <div className="chip chip-1">🍚 오늘의 식단</div>
           <div className="chip chip-2">🎖️ 군 용어 사전</div>
           <div className="chip chip-3">🏥 복지 정보</div>

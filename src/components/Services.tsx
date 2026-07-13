@@ -1,17 +1,20 @@
 import Reveal from "./Reveal";
+import Spotlight from "./Spotlight";
 
 export default function Services() {
   return (
     <section className="services section" id="services">
       <div className="container">
         <Reveal>
-          <span className="section-tag">Service</span>
+          <span className="section-tag">
+            <i>03</i> Service
+          </span>
           <h2 className="section-title">두 가지 짬봇, 하나의 경험</h2>
         </Reveal>
 
         <div className="services-grid">
           <Reveal delay={0}>
-            <article className="service-card">
+            <Spotlight className="service-card">
               <span className="badge badge-live">운영 중</span>
               <div className="service-icon service-icon-chat">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -32,11 +35,11 @@ export default function Services() {
               >
                 채널 추가하기 →
               </a>
-            </article>
+            </Spotlight>
           </Reveal>
 
           <Reveal delay={140}>
-            <article className="service-card service-card-ended">
+            <Spotlight className="service-card service-card-ended">
               <span className="badge badge-ended">서비스 종료</span>
               <div className="service-icon service-icon-voice">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -54,7 +57,7 @@ export default function Services() {
               <span className="service-link service-link-disabled">
                 서비스가 종료되었습니다
               </span>
-            </article>
+            </Spotlight>
           </Reveal>
         </div>
       </div>

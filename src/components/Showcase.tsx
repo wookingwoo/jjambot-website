@@ -47,7 +47,9 @@ export default function Showcase() {
     <section className="showcase section" id="preview">
       <div className="container">
         <Reveal>
-          <span className="section-tag">Features</span>
+          <span className="section-tag">
+            <i>02</i> Features
+          </span>
           <h2 className="section-title">
             73,000여 가지 군 생활 정보를
             <br />
@@ -63,6 +65,9 @@ export default function Showcase() {
               </div>
             </Reveal>
             <Reveal from={i % 2 ? "left" : "right"} className="showcase-copy">
+              <span className="showcase-num" aria-hidden="true">
+                {String(i + 1).padStart(2, "0")}
+              </span>
               <span className="pill pill-sm">{item.tag}</span>
               <h3>{item.title}</h3>
               <p>{item.desc}</p>

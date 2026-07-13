@@ -8,6 +8,7 @@ export default function CTA() {
         <Reveal>
           <div className="cta-card">
             <div className="cta-glow" aria-hidden="true" />
+            <span className="cta-kicker">Ready when you are —</span>
             <h2>
               지금 바로, 카카오톡에서
               <br />
