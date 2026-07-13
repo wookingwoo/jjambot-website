@@ -44,7 +44,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            className="btn btn-kakao btn-sm nav-cta"
+            className="btn btn-primary btn-sm nav-cta"
             href="https://pf.kakao.com/_xlVKrxb/chat"
             target="_blank"
             rel="noreferrer"

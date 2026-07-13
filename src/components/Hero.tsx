@@ -30,7 +30,7 @@ export default function Hero() {
 
           <div className="hero-actions fade-item" style={{ animationDelay: "0.35s" }}>
             <a
-              className="btn btn-kakao"
+              className="btn btn-primary"
               href="https://pf.kakao.com/_xlVKrxb"
               target="_blank"
               rel="noreferrer"

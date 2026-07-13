@@ -3,19 +3,20 @@
    ============================================================ */
 
 :root {
-  --bg: #07090d;
-  --bg-soft: #0b0e14;
+  --bg: #080a07;
+  --bg-soft: #0c0f0a;
   --surface: rgba(255, 255, 255, 0.04);
   --surface-strong: rgba(255, 255, 255, 0.07);
   --border: rgba(255, 255, 255, 0.09);
   --border-strong: rgba(255, 255, 255, 0.16);
-  --text: #eef1f6;
-  --text-dim: #9aa3b2;
-  --text-faint: #6b7484;
-  --yellow: #fee500;
-  --amber: #ffb02e;
-  --grad-accent: linear-gradient(120deg, #fee500 10%, #ffb02e 90%);
-  --kakao-brown: #191600;
+  --text: #eff1ea;
+  --text-dim: #9ea695;
+  --text-faint: #6f7767;
+  --accent: #b5c25e;
+  --accent-deep: #7d8b3e;
+  --grad-accent: linear-gradient(120deg, #c8d17f 10%, #8fa04a 90%);
+  --ink: #171a0b;
+  --kakao-yellow: #fee500;
   --radius: 20px;
   --radius-lg: 28px;
   --font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
@@ -59,7 +60,7 @@ a {
 }
 
 ::selection {
-  background: rgba(254, 229, 0, 0.25);
+  background: rgba(181, 194, 94, 0.25);
 }
 
 .container {
@@ -82,7 +83,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--yellow);
+  color: var(--accent);
   margin-bottom: 14px;
 }
 
@@ -135,14 +136,14 @@ a {
   font-size: 0.9rem;
 }
 
-.btn-kakao {
+.btn-primary {
   background: var(--grad-accent);
-  color: var(--kakao-brown);
-  box-shadow: 0 10px 34px -10px rgba(254, 229, 0, 0.45);
+  color: var(--ink);
+  box-shadow: 0 10px 34px -10px rgba(181, 194, 94, 0.45);
 }
 
-.btn-kakao:hover {
-  box-shadow: 0 16px 44px -10px rgba(254, 229, 0, 0.55);
+.btn-primary:hover {
+  box-shadow: 0 16px 44px -10px rgba(181, 194, 94, 0.55);
 }
 
 .btn-ghost {
@@ -158,8 +159,8 @@ a {
 }
 
 .btn-dark {
-  background: #14120a;
-  color: #ffec66;
+  background: #12150a;
+  color: #dde3af;
 }
 
 .btn-dark:hover {
@@ -167,13 +168,13 @@ a {
 }
 
 .btn-dark-ghost {
-  background: rgba(20, 18, 10, 0.12);
-  border-color: rgba(20, 18, 10, 0.35);
-  color: #14120a;
+  background: rgba(18, 21, 10, 0.12);
+  border-color: rgba(18, 21, 10, 0.35);
+  color: #12150a;
 }
 
 .btn-dark-ghost:hover {
-  background: rgba(20, 18, 10, 0.2);
+  background: rgba(18, 21, 10, 0.2);
 }
 
 .pill {
@@ -193,27 +194,27 @@ a {
 .pill-sm {
   padding: 6px 14px;
   font-size: 0.8rem;
-  color: var(--yellow);
-  border-color: rgba(254, 229, 0, 0.25);
-  background: rgba(254, 229, 0, 0.06);
+  color: var(--accent);
+  border-color: rgba(181, 194, 94, 0.25);
+  background: rgba(181, 194, 94, 0.06);
 }
 
 .pill-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--yellow);
-  box-shadow: 0 0 0 4px rgba(254, 229, 0, 0.15);
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(181, 194, 94, 0.15);
   animation: pulse-dot 2.4s infinite;
 }
 
 @keyframes pulse-dot {
   0%,
   100% {
-    box-shadow: 0 0 0 3px rgba(254, 229, 0, 0.18);
+    box-shadow: 0 0 0 3px rgba(181, 194, 94, 0.18);
   }
   50% {
-    box-shadow: 0 0 0 7px rgba(254, 229, 0, 0.05);
+    box-shadow: 0 0 0 7px rgba(181, 194, 94, 0.05);
   }
 }
 
@@ -260,10 +261,10 @@ a {
   height: 38px;
   border-radius: 12px;
   background: var(--grad-accent);
-  color: var(--kakao-brown);
+  color: var(--ink);
   font-size: 1.05rem;
   font-weight: 900;
-  box-shadow: 0 6px 20px -6px rgba(254, 229, 0, 0.5);
+  box-shadow: 0 6px 20px -6px rgba(181, 194, 94, 0.5);
 }
 
 .brand-name {
@@ -364,7 +365,7 @@ a {
   height: 620px;
   top: -260px;
   left: -140px;
-  background: radial-gradient(circle, rgba(254, 229, 0, 0.14), transparent 65%);
+  background: radial-gradient(circle, rgba(181, 194, 94, 0.14), transparent 65%);
 }
 
 .hero-glow-2 {
@@ -372,7 +373,7 @@ a {
   height: 560px;
   top: 40px;
   right: -180px;
-  background: radial-gradient(circle, rgba(255, 176, 46, 0.1), transparent 65%);
+  background: radial-gradient(circle, rgba(125, 139, 62, 0.12), transparent 65%);
 }
 
 .hero-inner {
@@ -481,7 +482,7 @@ a {
   height: 40px;
   border-radius: 14px;
   background: var(--grad-accent);
-  color: var(--kakao-brown);
+  color: var(--ink);
   font-weight: 900;
 }
 
@@ -541,10 +542,11 @@ a {
 .msg-4 { animation-delay: 2.75s; }
 .msg-5 { animation-delay: 3.5s; }
 
+/* 실제 카카오톡 말풍선을 재현하는 요소라 브랜드 옐로우를 유지한다 */
 .bubble-user {
   align-self: flex-end;
-  background: var(--grad-accent);
-  color: var(--kakao-brown);
+  background: var(--kakao-yellow);
+  color: #191600;
   font-weight: 600;
   border-bottom-right-radius: 6px;
 }
@@ -558,7 +560,7 @@ a {
 }
 
 .bubble-bot b {
-  color: var(--yellow);
+  color: var(--accent);
   font-weight: 700;
 }
 
@@ -594,7 +596,7 @@ a {
 .menu-date {
   font-size: 0.76rem;
   font-weight: 700;
-  color: var(--yellow);
+  color: var(--accent);
   margin-bottom: 3px;
 }
 
@@ -750,9 +752,9 @@ a {
 
 .feature-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(254, 229, 0, 0.35);
+  border-color: rgba(181, 194, 94, 0.35);
   background: var(--surface-strong);
-  box-shadow: 0 30px 60px -30px rgba(254, 229, 0, 0.18);
+  box-shadow: 0 30px 60px -30px rgba(181, 194, 94, 0.18);
 }
 
 .feature-icon {
@@ -761,9 +763,9 @@ a {
   width: 56px;
   height: 56px;
   border-radius: 16px;
-  background: rgba(254, 229, 0, 0.08);
-  border: 1px solid rgba(254, 229, 0, 0.2);
-  color: var(--yellow);
+  background: rgba(181, 194, 94, 0.08);
+  border: 1px solid rgba(181, 194, 94, 0.2);
+  color: var(--accent);
   margin-bottom: 24px;
 }
 
@@ -803,7 +805,7 @@ a {
   border-radius: var(--radius-lg);
   background: radial-gradient(
       ellipse 80% 70% at 50% 30%,
-      rgba(254, 229, 0, 0.09),
+      rgba(181, 194, 94, 0.09),
       transparent 70%
     ),
     var(--surface);
@@ -844,7 +846,7 @@ a {
 
 .showcase-both {
   margin-top: 14px;
-  color: var(--yellow) !important;
+  color: var(--accent) !important;
   opacity: 0.75;
   font-weight: 600;
 }
@@ -916,9 +918,9 @@ a {
 }
 
 .service-icon-chat {
-  background: rgba(254, 229, 0, 0.1);
-  border: 1px solid rgba(254, 229, 0, 0.25);
-  color: var(--yellow);
+  background: rgba(181, 194, 94, 0.1);
+  border: 1px solid rgba(181, 194, 94, 0.25);
+  color: var(--accent);
 }
 
 .service-icon-voice {
@@ -951,7 +953,7 @@ a {
 .service-link {
   font-weight: 700;
   font-size: 0.95rem;
-  color: var(--yellow);
+  color: var(--accent);
   transition: opacity 0.2s;
 }
 
@@ -978,7 +980,7 @@ a {
   padding: 90px 40px;
   border-radius: 36px;
   background: var(--grad-accent);
-  color: var(--kakao-brown);
+  color: var(--ink);
   overflow: hidden;
 }
 
@@ -1075,8 +1077,8 @@ a {
 }
 
 .footer-social a:hover {
-  color: var(--yellow);
-  border-color: rgba(254, 229, 0, 0.35);
+  color: var(--accent);
+  border-color: rgba(181, 194, 94, 0.35);
   transform: translateY(-3px);
 }
 
@@ -1096,7 +1098,7 @@ a {
 }
 
 .footer-bottom a:hover {
-  color: var(--yellow);
+  color: var(--accent);
 }
 
 .footer-divider {
