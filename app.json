@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "jjambot-meal",
-    "slug": "jjambot-meal",
+    "name": "jjambot-app",
+    "slug": "jjambot-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "jjambotmeal",
+    "scheme": "jjambotapp",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
@@ -20,7 +20,7 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "output": "static",
+      "output": "single",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
