@@ -5,6 +5,17 @@
     <title>짬봇 &mdash; 군대 정보알림 AI 챗봇과 보이스봇</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("jjambot-theme");
+          if (stored === "light" || stored === "dark") {
+            document.documentElement.setAttribute("data-theme", stored);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <meta name="author" content="wookingwoo" />
     <meta
       name="description"
