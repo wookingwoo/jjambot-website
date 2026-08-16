@@ -813,6 +813,12 @@ a {
   padding: 2px 7px;
 }
 
+.menu-tag-side {
+  color: var(--text-faint);
+  background: transparent;
+  border: 1px solid var(--border);
+}
+
 .phone-quick {
   display: flex;
   gap: 8px;
@@ -1080,15 +1086,13 @@ a {
   pointer-events: none;
 }
 
-.showcase-media img {
+.showcase-device {
   position: relative;
-  width: min(290px, 80%);
-  border-radius: 26px;
-  box-shadow: var(--shadow-card);
+  width: min(390px, 100%);
   transition: transform 0.5s var(--ease);
 }
 
-.showcase-media:hover img {
+.showcase-media:hover .showcase-device {
   transform: translateY(-8px) rotate(-1.2deg) scale(1.02);
 }
 
@@ -1129,6 +1133,348 @@ a {
   color: var(--accent) !important;
   opacity: 0.75;
   font-weight: 600;
+}
+
+/* ------------------------------------------------------------
+   Showcase app screens — menu / dictionary / welfare
+   ------------------------------------------------------------ */
+
+.app-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* menu screen */
+
+.menu-app-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-faint);
+}
+
+.toggle-track {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border-strong);
+  flex-shrink: 0;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--text-faint);
+  transition: transform 0.25s var(--ease), background 0.25s;
+}
+
+.toggle-on .toggle-track {
+  background: rgba(152, 167, 99, 0.28);
+  border-color: rgba(152, 167, 99, 0.5);
+}
+
+.toggle-on .toggle-thumb {
+  transform: translateX(13px);
+  background: var(--accent-bright);
+}
+
+.day-tabs {
+  display: flex;
+  gap: 6px;
+}
+
+.day-tab {
+  padding: 7px 13px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-faint);
+}
+
+.day-tab-active {
+  color: var(--ink);
+  background: var(--grad-accent);
+  font-weight: 700;
+}
+
+.menu-date-lg {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--accent-bright);
+}
+
+.meal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.meal-row {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.meal-list .meal-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.meal-row-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  background: rgba(152, 167, 99, 0.1);
+  border: 1px solid rgba(152, 167, 99, 0.22);
+  color: var(--accent);
+}
+
+.meal-name {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.meal-row-body p {
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+.allergy-tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #e0b667;
+  background: rgba(224, 182, 103, 0.12);
+  border: 1px solid rgba(224, 182, 103, 0.28);
+  vertical-align: 1px;
+}
+
+/* dictionary screen */
+
+.dict-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  color: var(--text-faint);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.dict-search span {
+  color: var(--text);
+}
+
+.dict-result {
+  padding: 18px 18px 16px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.dict-result-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: rgba(152, 167, 99, 0.1);
+  border: 1px solid rgba(152, 167, 99, 0.25);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin-bottom: 12px;
+}
+
+.dict-correct {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.dict-correct s {
+  color: var(--text-faint);
+  font-weight: 500;
+}
+
+.dict-arrow {
+  color: var(--text-faint);
+  margin: 0 2px;
+}
+
+.dict-correct b {
+  color: var(--accent-bright);
+  font-weight: 800;
+}
+
+.dict-desc {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.person-card {
+  display: flex;
+  gap: 13px;
+  padding: 16px;
+  border-radius: 16px;
+  background: linear-gradient(155deg, rgba(152, 167, 99, 0.1), transparent 60%), var(--surface);
+  border: 1px solid var(--border);
+}
+
+.person-badge {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--grad-accent);
+  color: var(--ink);
+}
+
+.person-name {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.person-name em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  margin-left: 6px;
+}
+
+.person-card p {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  line-height: 1.55;
+}
+
+.dict-foot {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* welfare screen */
+
+.welfare-feature {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: linear-gradient(115deg, rgba(152, 167, 99, 0.16), rgba(152, 167, 99, 0.03));
+  border: 1px solid rgba(152, 167, 99, 0.25);
+}
+
+.welfare-feature-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  background: var(--grad-accent);
+  color: var(--ink);
+}
+
+.welfare-feature-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.welfare-feature-body strong {
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.welfare-feature-desc {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.welfare-feature-arrow {
+  margin-left: auto;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.welfare-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.welfare-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 6px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: transform 0.3s var(--ease), border-color 0.3s, background 0.3s;
+}
+
+.welfare-tile:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
+  background: var(--surface-strong);
+}
+
+.welfare-tile-icon {
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+}
+
+.welfare-tile span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-dim);
 }
 
 /* ------------------------------------------------------------

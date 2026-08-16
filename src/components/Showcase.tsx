@@ -1,12 +1,15 @@
+import { type ComponentType } from "react";
 import Reveal from "./Reveal";
+import MenuScreen from "./MenuScreen";
+import DictionaryScreen from "./DictionaryScreen";
+import WelfareScreen from "./WelfareScreen";
 
 interface Item {
   tag: string;
   title: string;
   desc: string;
   notes: string[];
-  img: string;
-  alt: string;
+  Visual: ComponentType;
 }
 
 const ITEMS: Item[] = [
@@ -17,8 +20,7 @@ const ITEMS: Item[] = [
     notes: [
       "국방부 공공데이터 “군 급양대별 병영 표준 식단 정보” 기반으로 제공되며, 급양대 상황에 따라 실제 식단과 차이가 있을 수 있습니다.",
     ],
-    img: "/img/menu.png",
-    alt: "짬봇 식단 조회 화면",
+    Visual: MenuScreen,
   },
   {
     tag: "군 용어 & 인물 사전",
@@ -27,8 +29,7 @@ const ITEMS: Item[] = [
     notes: [
       "활용 공공데이터: 전쟁기념관 행사정보 · 호국선열 정보 · 월남전쟁 정보 · 6·25전쟁 정보 · 군사 용어 정보 · 국방데이터 표준단어 목록",
     ],
-    img: "/img/people.png",
-    alt: "짬봇 군 용어 및 인물 사전 화면",
+    Visual: DictionaryScreen,
   },
   {
     tag: "복지 정보",
@@ -37,8 +38,7 @@ const ITEMS: Item[] = [
     notes: [
       "활용 공공데이터: PX 인기상품 · 군병원 · TMO · 군 복지시설 주변 관광지 · 병사 할인 혜택 · 봉급표 · 보급기준 · 체력검정 기준 · 군 감염병 · 학군단 · 예비군 훈련장 및 부대 연락처",
     ],
-    img: "/img/money.png",
-    alt: "짬봇 복지정보 화면",
+    Visual: WelfareScreen,
   },
 ];
 
@@ -61,7 +61,9 @@ export default function Showcase() {
           <div className={`showcase-row ${i % 2 ? "showcase-row-flip" : ""}`} key={item.title}>
             <Reveal from={i % 2 ? "right" : "left"} className="showcase-media-wrap">
               <div className="showcase-media">
-                <img src={item.img} alt={item.alt} loading="lazy" />
+                <div className="showcase-device">
+                  <item.Visual />
+                </div>
               </div>
             </Reveal>
             <Reveal from={i % 2 ? "left" : "right"} className="showcase-copy">
