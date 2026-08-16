@@ -9,18 +9,60 @@ import { Platform } from 'react-native';
 
 export const Colors = {
   light: {
-    text: '#000000',
+    text: '#111318',
     background: '#ffffff',
     backgroundElement: '#F0F0F3',
     backgroundSelected: '#E0E1E6',
-    textSecondary: '#60646C',
+    textSecondary: '#5B5F68',
+    textTertiary: '#9599A2',
+    border: '#E3E4E9',
+
+    tint: '#1372D6',
+    tintSoft: 'rgba(19,114,214,0.10)',
+
+    danger: '#C4384A',
+    dangerSoft: 'rgba(196,56,74,0.10)',
+    warning: '#8A5F12',
+    warningSoft: 'rgba(196,140,32,0.14)',
+    info: '#3B5FCF',
+    infoSoft: 'rgba(59,95,207,0.09)',
+
+    mealMorning: '#D9822B',
+    mealMorningSoft: 'rgba(217,130,43,0.14)',
+    mealNoon: '#0E9488',
+    mealNoonSoft: 'rgba(14,148,136,0.12)',
+    mealEvening: '#6C5CE0',
+    mealEveningSoft: 'rgba(108,92,224,0.12)',
+    mealSpecial: '#D6437A',
+    mealSpecialSoft: 'rgba(214,67,122,0.12)',
   },
   dark: {
-    text: '#ffffff',
+    text: '#F5F6F8',
     background: '#000000',
-    backgroundElement: '#212225',
+    backgroundElement: '#1C1D20',
     backgroundSelected: '#2E3135',
-    textSecondary: '#B0B4BA',
+    textSecondary: '#A7ABB4',
+    textTertiary: '#6E7278',
+    border: '#2A2C31',
+
+    tint: '#5FA8FF',
+    tintSoft: 'rgba(95,168,255,0.16)',
+
+    danger: '#FF7A82',
+    dangerSoft: 'rgba(255,122,130,0.16)',
+    warning: '#E0A542',
+    warningSoft: 'rgba(224,165,66,0.16)',
+    info: '#8AA6FF',
+    infoSoft: 'rgba(138,166,255,0.14)',
+
+    mealMorning: '#E8A254',
+    mealMorningSoft: 'rgba(232,162,84,0.18)',
+    mealNoon: '#3DBDB0',
+    mealNoonSoft: 'rgba(61,189,176,0.16)',
+    mealEvening: '#9C8FFF',
+    mealEveningSoft: 'rgba(156,143,255,0.18)',
+    mealSpecial: '#F072A0',
+    mealSpecialSoft: 'rgba(240,114,160,0.16)',
   },
 } as const;
 

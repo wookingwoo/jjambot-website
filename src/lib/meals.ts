@@ -1,3 +1,5 @@
+import type { ThemeColor } from '@/constants/theme';
+
 import { supabase } from './supabase';
 
 const SERVICE_PREFIX = 'DS_TB_MNDT_DATEBYMLSVC';
@@ -17,6 +19,24 @@ export interface MealRow {
   special_dish_cal: number | null;
   total_cal: number | null;
 }
+
+export interface MealFieldConfig {
+  key: 'breakfast' | 'lunch' | 'dinner' | 'special_dish';
+  calKey: 'breakfast_cal' | 'lunch_cal' | 'dinner_cal' | 'special_dish_cal';
+  name: string;
+  accent: ThemeColor;
+  accentSoft: ThemeColor;
+  /** [시작, 끝] 자정 이후 분 단위. 오늘 날짜를 볼 때 "지금" 배지를 띄우는 기준. null이면 표시 안 함. */
+  band: [number, number] | null;
+}
+
+/** 화면에 표시할 끼니 순서와, 각 끼니의 색상/시간대 매핑. index.tsx와 MealCard가 공유하는 단일 소스. */
+export const MEAL_FIELDS: MealFieldConfig[] = [
+  { key: 'breakfast', calKey: 'breakfast_cal', name: '아침', accent: 'mealMorning', accentSoft: 'mealMorningSoft', band: [360, 540] },
+  { key: 'lunch', calKey: 'lunch_cal', name: '점심', accent: 'mealNoon', accentSoft: 'mealNoonSoft', band: [660, 810] },
+  { key: 'dinner', calKey: 'dinner_cal', name: '저녁', accent: 'mealEvening', accentSoft: 'mealEveningSoft', band: [1020, 1140] },
+  { key: 'special_dish', calKey: 'special_dish_cal', name: '특식', accent: 'mealSpecial', accentSoft: 'mealSpecialSoft', band: null },
+];
 
 function serviceSuffix(service: string): string {
   return service.slice(SERVICE_PREFIX.length).replace(/^_/, '');
