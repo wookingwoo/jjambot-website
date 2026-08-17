@@ -35,7 +35,8 @@ export default function CTA() {
                 target="_blank"
                 rel="noreferrer"
               >
-                바로 대화하기
+                <KakaoIcon />
+                톡문의
               </a>
               <a
                 className="btn btn-dark-ghost"
