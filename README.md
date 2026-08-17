@@ -1,4 +1,4 @@
-# jjambot-site
+# jjambot
 
 짬봇(군대 정보알림 AI 챗봇) 공식 웹사이트
 
