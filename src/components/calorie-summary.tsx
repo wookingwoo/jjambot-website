@@ -17,7 +17,7 @@ export function CalorieSummary({ segments, total }: CalorieSummaryProps) {
 
   return (
     <Animated.View entering={FadeIn.duration(300)}>
-      <ThemedView type="backgroundElement" style={styles.card}>
+      <ThemedView type="backgroundElement" style={[styles.card, { boxShadow: theme.cardShadow }]}>
         <View style={styles.headRow}>
           <ThemedText type="small" themeColor="textSecondary">
             총 섭취 칼로리

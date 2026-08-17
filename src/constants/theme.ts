@@ -35,6 +35,9 @@ export const Colors = {
     mealEveningSoft: 'rgba(108,92,224,0.12)',
     mealSpecial: '#D6437A',
     mealSpecialSoft: 'rgba(214,67,122,0.12)',
+
+    // 라이트 배경에서만 카드가 붕 뜬 듯한 느낌이 실제로 보인다(다크 배경에서는 그림자가 거의 안 보임).
+    cardShadow: '0px 1px 2px rgba(17,19,24,0.04), 0px 10px 24px rgba(17,19,24,0.07)',
   },
   dark: {
     text: '#F5F6F8',
@@ -63,6 +66,8 @@ export const Colors = {
     mealEveningSoft: 'rgba(156,143,255,0.18)',
     mealSpecial: '#F072A0',
     mealSpecialSoft: 'rgba(240,114,160,0.16)',
+
+    cardShadow: '0px 1px 2px rgba(0,0,0,0.4)',
   },
 } as const;
 

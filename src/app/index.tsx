@@ -9,6 +9,7 @@ import { Chevron, DayNav } from '@/components/day-nav';
 import { MealCard } from '@/components/meal-card';
 import { ThemedText } from '@/components/themed-text';
 import { ThemedView } from '@/components/themed-view';
+import { ThemeToggle } from '@/components/theme-toggle';
 import { UnitPickerModal } from '@/components/unit-picker-modal';
 import { MaxContentWidth, Spacing } from '@/constants/theme';
 import { useTheme } from '@/hooks/use-theme';
@@ -32,7 +33,7 @@ function StatusCard({
   const fg = tone === 'danger' ? theme.danger : theme.textSecondary;
 
   return (
-    <Animated.View entering={FadeIn.duration(220)} style={[styles.statusCard, { backgroundColor: bg }]}>
+    <Animated.View entering={FadeIn.duration(220)} style={[styles.statusCard, { backgroundColor: bg, boxShadow: theme.cardShadow }]}>
       <ThemedText type="small" style={[styles.statusText, { color: fg }]}>
         {title}
       </ThemedText>
@@ -87,23 +88,26 @@ export default function MealScreen() {
             </ThemedText>
             <ThemedText type="subtitle">식단 조회</ThemedText>
           </View>
-          <Pressable
-            onPress={() => setPickerOpen(true)}
-            disabled={meal.services.length === 0}
-            accessibilityRole="button"
-            accessibilityLabel="부대 선택"
-            accessibilityHint="현재 부대를 변경합니다"
-            style={({ pressed }) => [
-              styles.unitButton,
-              {
-                backgroundColor: theme.backgroundElement,
-                opacity: meal.services.length === 0 ? 0.5 : pressed ? 0.7 : 1,
-              },
-            ]}
-          >
-            <ThemedText type="smallBold">{meal.service ? serviceLabel(meal.service) : '불러오는 중…'}</ThemedText>
-            <Chevron direction="down" color={theme.textSecondary} size={7} />
-          </Pressable>
+          <View style={styles.headerActions}>
+            <ThemeToggle />
+            <Pressable
+              onPress={() => setPickerOpen(true)}
+              disabled={meal.services.length === 0}
+              accessibilityRole="button"
+              accessibilityLabel="부대 선택"
+              accessibilityHint="현재 부대를 변경합니다"
+              style={({ pressed }) => [
+                styles.unitButton,
+                {
+                  backgroundColor: theme.backgroundElement,
+                  opacity: meal.services.length === 0 ? 0.5 : pressed ? 0.7 : 1,
+                },
+              ]}
+            >
+              <ThemedText type="smallBold">{meal.service ? serviceLabel(meal.service) : '불러오는 중…'}</ThemedText>
+              <Chevron direction="down" color={theme.textSecondary} size={7} />
+            </Pressable>
+          </View>
         </View>
 
         <View style={styles.navBlock}>
@@ -206,6 +210,11 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     justifyContent: 'space-between',
     paddingTop: Spacing.three,
+  },
+  headerActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Spacing.two,
   },
   unitButton: {
     flexDirection: 'row',

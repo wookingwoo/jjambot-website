@@ -25,7 +25,7 @@ export function MealCard({ field, dish, cal, allergyOn, isNow, index }: MealCard
 
   return (
     <Animated.View entering={FadeInDown.delay(index * 60).duration(360)}>
-      <ThemedView type="backgroundElement" style={styles.card}>
+      <ThemedView type="backgroundElement" style={[styles.card, { boxShadow: theme.cardShadow }]}>
         <View style={styles.head}>
           <View style={styles.identity}>
             <View style={[styles.badge, { backgroundColor: accent }]}>
