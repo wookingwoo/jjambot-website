@@ -1,5 +1,5 @@
 import ChatDemo from "./ChatDemo";
-import { KakaoIcon } from "./Navbar";
+import { KakaoIcon, WebIcon } from "./Navbar";
 
 export default function Hero() {
   return (
@@ -38,6 +38,15 @@ export default function Hero() {
             >
               <KakaoIcon />
               카카오톡 채널 추가
+            </a>
+            <a
+              className="btn btn-ghost"
+              href="https://app.jjambot.ronny.dev/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <WebIcon />
+              웹에서 바로 사용하기
             </a>
             <a
               className="btn btn-ghost"

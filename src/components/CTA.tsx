@@ -1,5 +1,5 @@
 import Reveal from "./Reveal";
-import { KakaoIcon } from "./Navbar";
+import { KakaoIcon, WebIcon } from "./Navbar";
 
 export default function CTA() {
   return (
@@ -36,6 +36,15 @@ export default function CTA() {
                 rel="noreferrer"
               >
                 바로 대화하기
+              </a>
+              <a
+                className="btn btn-dark-ghost"
+                href="https://app.jjambot.ronny.dev/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <WebIcon />
+                웹에서 사용하기
               </a>
             </div>
           </div>

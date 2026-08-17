@@ -52,6 +52,16 @@ export default function Navbar() {
             </a>
           ))}
           <a
+            className="btn btn-ghost btn-sm nav-cta"
+            href="https://app.jjambot.ronny.dev/"
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => setOpen(false)}
+          >
+            <WebIcon />
+            웹에서 사용하기
+          </a>
+          <a
             className="btn btn-primary btn-sm nav-cta"
             href="https://pf.kakao.com/_xlVKrxb/chat"
             target="_blank"
@@ -90,6 +100,15 @@ export default function Navbar() {
         aria-hidden="true"
       />
     </header>
+  );
+}
+
+export function WebIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3c2.5 2.6 3.8 5.8 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.8-3.8-9s1.3-6.4 3.8-9Z" />
+    </svg>
   );
 }
 
