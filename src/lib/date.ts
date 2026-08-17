@@ -6,6 +6,19 @@ export function todayISOInSeoul(): string {
   return new Intl.DateTimeFormat('en-CA', { timeZone: KST_TZ }).format(new Date());
 }
 
+/** 현재 시각을 기기 타임존과 무관하게 Asia/Seoul 기준 자정 이후 분 단위로 반환 (0~1439). */
+export function nowMinutesInSeoul(): number {
+  const parts = new Intl.DateTimeFormat('en-GB', {
+    timeZone: KST_TZ,
+    hour: '2-digit',
+    minute: '2-digit',
+    hourCycle: 'h23',
+  }).formatToParts(new Date());
+  const hour = Number(parts.find((p) => p.type === 'hour')?.value ?? 0);
+  const minute = Number(parts.find((p) => p.type === 'minute')?.value ?? 0);
+  return hour * 60 + minute;
+}
+
 export function addDaysISO(iso: string, days: number): string {
   const [y, m, d] = iso.split('-').map(Number);
   const date = new Date(Date.UTC(y, m - 1, d));
